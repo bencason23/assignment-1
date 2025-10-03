@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribute to Nelson Mandela</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #0072C6, #00A4EF);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .intro {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 40px 0;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        
+        .intro img {
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .intro-text {
+            flex: 1;
+        }
+        
+        .intro-text h2 {
+            color: #0072C6;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #0072C6;
+            padding-bottom: 10px;
+        }
+        
+        .timeline {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            margin: 40px 0;
+        }
+        
+        .timeline h2 {
+            color: #0072C6;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #0072C6;
+            padding-bottom: 10px;
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .timeline-year {
+            background-color: #0072C6;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            min-width: 100px;
+            text-align: center;
+            margin-right: 20px;
+        }
+        
+        .timeline-content {
+            flex: 1;
+            padding: 10px 15px;
+            background-color: #f0f8ff;
+            border-radius: 5px;
+            border-left: 4px solid #0072C6;
+        }
+        
+        .quotes {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            margin: 40px 0;
+        }
+        
+        .quotes h2 {
+            color: #0072C6;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #0072C6;
+            padding-bottom: 10px;
+        }
+        
+        blockquote {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-left: 5px solid #0072C6;
+            border-radius: 5px;
+        }
+        
+        .legacy {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            margin: 40px 0;
+        }
+        
+        .legacy h2 {
+            color: #0072C6;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #0072C6;
+            padding-bottom: 10px;
+        }
+        
+        .legacy-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .legacy-item {
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .legacy-item h3 {
+            color: #0072C6;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        footer a {
+            color: #00A4EF;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .intro {
+                flex-direction: column;
+            }
+            
+            .intro img {
+                width: 100%;
+                max-width: 400px;
+            }
+            
+            header h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Nelson Mandela</h1>
+            <p>1918 - 2013 | Anti-apartheid revolutionary, political leader, and philanthropist</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="intro">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Nelson_Mandela_1994.jpg/640px-Nelson_Mandela_1994.jpg" alt="Nelson Mandela">
+            <div class="intro-text">
+                <h2>A Life of Courage and Compassion</h2>
+                <p>Nelson Rolihlahla Mandela was a South African anti-apartheid revolutionary, political leader, and philanthropist who served as President of South Africa from 1994 to 1999. He was the country's first black head of state and the first elected in a fully representative democratic election.</p>
+                <p>His government focused on dismantling the legacy of apartheid by tackling institutionalised racism and fostering racial reconciliation. Ideologically an African nationalist and socialist, he served as the president of the African National Congress (ANC) party from 1991 to 1997.</p>
+            </div>
+        </section>
+        
+        <section class="timeline">
+            <h2>Key Moments in Mandela's Life</h2>
+            <div class="timeline-item">
+                <div class="timeline-year">1918</div>
+                <div class="timeline-content">Born Rolihlahla Mandela in Mvezo, South Africa</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">1944</div>
+                <div class="timeline-content">Joined the African National Congress (ANC) and began actively opposing apartheid</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">1962</div>
+                <div class="timeline-content">Arrested and sentenced to five years in prison</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">1964</div>
+                <div class="timeline-content">Sentenced to life imprisonment during the Rivonia Trial</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">1990</div>
+                <div class="timeline-content">Released from prison after 27 years</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">1993</div>
+                <div class="timeline-content">Awarded the Nobel Peace Prize jointly with F.W. de Klerk</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">1994</div>
+                <div class="timeline-content">Became South Africa's first black president in the country's first democratic election</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">1999</div>
+                <div class="timeline-content">Stepped down after one term as president</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2013</div>
+                <div class="timeline-content">Passed away at the age of 95</div>
+            </div>
+        </section>
+        <script>
+            import { OpenAI } from "openai";
+
+const client = new OpenAI({
+	baseURL: "https://router.huggingface.co/v1",
+	apiKey: process.env.HF_TOKEN,
+});
+
+const chatCompletion = await client.chat.completions.create({
+	model: "meta-llama/Llama-3.1-8B-Instruct:cerebras",
+    messages: [
+        {
+            role: "user",
+            content: "What is the capital of France?",
+        },
+    ],
+});
+
+console.log(chatCompletion.choices[0].message);
+            </script>
+        
+        <section class="quotes">
+            <h2>Inspiring Words</h2>
+            <blockquote>
+                "Education is the most powerful weapon which you can use to change the world."
+            </blockquote>
+            <blockquote>
+                "It always seems impossible until it's done."
+            </blockquote>
+            <blockquote>
+                "For to be free is not merely to cast off one's chains, but to live in a way that respects and enhances the freedom of others."
+            </blockquote>
+            <blockquote>
+                "No one is born hating another person because of the color of his skin, or his background, or his religion. People must learn to hate, and if they can learn to hate, they can be taught to love, for love comes more naturally to the human heart than its opposite."
+            </blockquote>
+        </section>
+        
+        <section class="legacy">
+            <h2>Mandela's Enduring Legacy</h2>
+            <div class="legacy-content">
+                <div class="legacy-item">
+                    <h3>Peace and Reconciliation</h3>
+                    <p>Mandela's commitment to forgiveness and reconciliation helped South Africa transition from apartheid to democracy without descending into civil war.</p>
+                </div>
+                <div class="legacy-item">
+                    <h3>Human Rights Advocacy</h3>
+                    <p>Even after his presidency, Mandela continued to advocate for human rights, peace, and social justice worldwide.</p>
+                </div>
+                <div class="legacy-item">
+                    <h3>The Nelson Mandela Foundation</h3>
+                    <p>Established in 1999, the foundation promotes Mandela's vision of freedom and equality for all through dialogue and advocacy.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+        <p>created by Benson kamau BSE-01-0045/2025 .ALL RIGHTS RESERVED</p>
+
+
+        
+            
+        </div>
+    </footer>
+</body>
+</html>
